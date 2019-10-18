@@ -10,7 +10,9 @@ router.get('/', (req, res)=>{
             {nome:'Arroz', qt:'20g'},
             {nome:'Feijão', qt:'30g'},
             {nome:'Macarrão', qt:'50g'}
-        ]
+        ],
+        interesses:['node','js','css'],
+        teste:'<strong>Testando Negrito</strong>'
     };
     res.render('home', obj);
 });
