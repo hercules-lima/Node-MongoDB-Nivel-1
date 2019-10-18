@@ -3,8 +3,14 @@ const express = require('express');
 const router = express.Router();
 router.get('/', (req, res)=>{
     let obj = {
-        "nome":"Bonieky",
-        "idade":"22"
+        nome:req.query.nome,
+        idade:req.query.idade,
+        mostrar:true,
+        ingredientes:[
+            {nome:'Arroz', qt:'20g'},
+            {nome:'Feijão', qt:'30g'},
+            {nome:'Macarrão', qt:'50g'}
+        ]
     };
     res.render('home', obj);
 });
